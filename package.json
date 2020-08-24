@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "you-wear-it-best",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Portfolio Site for You Wear It Best",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Peter Sweeney <pjsweeney1@live.co.uk>",
   "dependencies": {
     "gatsby": "^2.24.47",
     "gatsby-image": "^2.4.16",
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/derrmru/you-wear-it-best"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
