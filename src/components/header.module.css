@@ -8,4 +8,18 @@
 .menuButton {
     font-size: 20px;
     margin-right: 10px;
+    color: var(--rich-purple);
+}
+
+.menuArea {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: var(--rich-purple);
+    color: var(--the-white)
+}
+
+.menuItem {
+    color: var(--the-white);
 }

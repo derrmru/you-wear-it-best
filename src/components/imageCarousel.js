@@ -1,11 +1,10 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+//import { useStaticQuery, graphql } from "gatsby"
 
 import styles from "./imageCarousel.module.css"
 
 let ImageCarousel = (props) => {
-    const data = useStaticQuery(graphql`
+    /*const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "material.png" }) {
         childImageSharp {
@@ -15,7 +14,7 @@ let ImageCarousel = (props) => {
         }
       }
     }
-  `)
+  `)*/
 
     return (
         <div className={styles.carouselContainer} style={{width: "100%"}}>
