@@ -3,6 +3,7 @@ module.exports = {
     title: `You Wear It Best`,
     description: `Bespoke Clothing and Accessories - Not For Everyone`,
     author: `@thepetersweeney.com`,
+    pathPrefix: "/you-wear-it-best"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
