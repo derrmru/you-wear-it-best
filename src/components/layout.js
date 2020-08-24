@@ -34,10 +34,13 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div>
+            © {new Date().getFullYear()}, Built by
+            {` `}
+            <a href="https://thepetersweeney.com"><strong>thepetersweeney.com</strong></a>
+          </div>
         </footer>
       </div>
     </>

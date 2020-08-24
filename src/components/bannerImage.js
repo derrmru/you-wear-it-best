@@ -2,6 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import styles from "./bannerImage.module.css"
+
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
  * images with lazy loading and reduced file sizes. The image is loaded using a
@@ -10,12 +12,12 @@ import Img from "gatsby-image"
  *
  */
 
-const Image = () => {
+const HeaderImage = (props) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "marek.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -23,7 +25,16 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <div className={styles.bannerContainer}>
+      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      <h1 className={styles.bannerText}>
+        You.<br />
+        Wear It.<br />
+        Best.<br />
+      </h1>
+    </div>
+    )
 }
 
-export default Image
+export default HeaderImage

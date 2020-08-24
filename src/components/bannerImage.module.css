@@ -1,0 +1,32 @@
+.bannerContainer {
+    position: relative;
+    -webkit-box-shadow: inset 0px -5px 15px -12px var(--the-black);
+    -moz-box-shadow: inset 0px -5px 15px -12px var(--the-black);
+    box-shadow: inset 0px -5px 15px -12px var(--the-black);
+}
+
+.bannerText {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    color: var(--rich-purple);
+    font-size: 80px;
+}
+
+@media only screen and (max-width: 890px) {
+    .bannerText {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .bannerText {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .bannerText {
+        font-size: 8vw;
+    }
+}
