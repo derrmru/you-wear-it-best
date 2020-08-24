@@ -22,4 +22,14 @@
 
 .menuItem {
     color: var(--the-white);
+    text-decoration: none;
+    font-size: 40px;
+    text-align: center;
+    margin: 4vh 0 0 0;
+}
+
+@media only screen and (max-width: 1024px) {
+    .menuItem {
+        font-size: 25px;
+    }
 }

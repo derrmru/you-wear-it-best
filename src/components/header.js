@@ -4,7 +4,12 @@ import React, { useState } from "react"
 
 import styles from "./header.module.css"
 
+//Pages Object to map out menu Items -- add new Pages her if you want in the header Menu
 export const Pages = {
+  home: {
+    title: "Home",
+    url: '/'
+  },
   about: {
     title: "About",
     url: '/about'
@@ -19,6 +24,7 @@ export const Pages = {
   }
 }
 
+//Header Component
 const Header = ({ siteTitle }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
@@ -50,20 +56,23 @@ const Header = ({ siteTitle }) => {
         </h1>
 
         <div className={styles.menuButton} onClick={() => setToggleMenu(!toggleMenu)}>
-            {toggleMenu ? <div>Items</div> : <div>Menu</div>}
+            {toggleMenu ? <div>|x|</div> : <div>Menu</div>}
         </div>
       </div>
       {
         toggleMenu && <div className={styles.menuArea}>
-            {Object.keys(Pages).map((x) => {
+            {Object.keys(Pages).map((x) => {//map through Pages object to create menu
               return (
                 <Link
                   to={Pages[x].url}
+                  className={styles.menuItem}
                 >
                   <div className={styles.menuItem}>{Pages[x].title}</div>
                 </Link>
               )
             })}
+
+            <hr style={{width: "30%", margin: "8vh auto"}} />
           </div>
       }
     </header>
