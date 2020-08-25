@@ -4,10 +4,13 @@
 
 .contactHeader {
     width: 100%;
-    border: 3px solid var(--rich-purple);
-    border-top: none;
+    background-color: var(--rich-purple);
     padding: 1vh 0 1vh 0;
     text-align: center;
+}
+
+.contactHeader h2 {
+    color: var(--the-white);
 }
 
 /***

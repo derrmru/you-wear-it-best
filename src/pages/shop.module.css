@@ -1,0 +1,11 @@
+.shopTitle {
+    border-bottom: 3px solid var(--rich-purple);
+}
+
+.shopContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}

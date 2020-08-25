@@ -3,6 +3,7 @@ import styles from "./colorPicker.module.css"
 
 const ColorPicker = () => {
     const [expand, setExpand] = useState(false);
+    const [typedColor, setTypedColor] = useState("");
 
     const Colors = [
         "#4A1942",
@@ -33,18 +34,20 @@ const ColorPicker = () => {
     }
 
     return (
-        <div className={styles.cpBox} onClick={() => {setExpand(!expand)}}>
+        <div className={styles.cpBox}>
             {
                 expand ? 
                 <>
-                    <p>&#62;</p>
+                    <p onClick={() => {setExpand(!expand)}}>&#60;</p>
                         <div className={styles.cpPicker}>
                             {Colors.map((x) => {
                                 return <div className={styles.colorBox} style={{backgroundColor: x}} onClick={() => {setColor(x)}}></div>
                             })}
+                            <input type="text" value={typedColor} onChange={(e) => {setTypedColor(e.target.value)}} />
+                            <div className={styles.updateButton} onClick={() => setColor(typedColor)}>| Set To Typed Color</div>
                         </div>
                 </> :
-                <p>&#60;</p>
+                <p onClick={() => {setExpand(!expand)}}>&#62;</p>
             }
         </div>
     )

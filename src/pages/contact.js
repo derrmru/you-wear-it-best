@@ -15,7 +15,7 @@ const Contact = () => {
             <SEO title="Get In Touch" />
 
             <div className={styles.contactHeader}>
-                <h2>Header Placeholder</h2>
+                <h2>Contact Header Placeholder</h2>
             </div>
 
             <div className={styles.contactRow}>
@@ -30,12 +30,12 @@ const Contact = () => {
                     </a>
                 </div>
                 <div className={styles.contactOption}>
-                    <a href="https://www.instagram.com/you.wearitbest/" target="_blank">
+                    <a href="https://www.instagram.com/you.wearitbest/" target="_blank" rel="noreferrer">
                         |Follow Me
                     </a>
                 </div>
                 <div className={styles.contactOption}>
-                    <a href="#" target="_blank">
+                    <a href="https://example.com" target="_blank" rel="noreferrer">
                         |Discuss a Project
                     </a>
                 </div>

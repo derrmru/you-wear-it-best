@@ -1,0 +1,50 @@
+.projectContainer {
+    width: 28%;
+    height: 45vh;
+    margin: 2vh 0;
+    text-align: center;
+    background-color: var(--the-white);
+}
+
+.cardImage {
+    height: 35vh;
+    width: 90%;
+    margin: 2vh auto 2vh auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--rich-purple);
+}
+
+.link:hover {
+    color: var(--main-color);
+}
+
+/**
+*MEDIA QUERIES*********************************
+*/
+
+@media only screen and (max-width: 1025) {
+    .projectContainer {
+        height: 40vh;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .projectContainer {
+        margin: 20px;
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projectContainer {
+        width: 80%;
+    }
+}

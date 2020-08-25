@@ -21,6 +21,18 @@ header {
     text-align: center;
 }
 
+.nfeText {
+    width: 50%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--the-black);
+    border: 3px solid var(--rich-purple);
+    border-bottom: none;
+    border-right: none;
+}
+
 .nfeChild {
     width: 50%;
     height: 20vh;
@@ -62,6 +74,11 @@ footer a {
         flex-direction: column;
     }
 
+    .nfeText {
+        width: 100%;
+        border-right: 3px solid var(--rich-purple)
+    }
+
     .nfeChild {
         width: 100%;
     }
@@ -69,4 +86,8 @@ footer a {
     .shorter-nfe {
         height: 10vh;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    
 }

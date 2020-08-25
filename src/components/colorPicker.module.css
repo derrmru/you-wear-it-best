@@ -1,19 +1,19 @@
 .cpBox {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 10px;
+    left: 0;
     height: auto;
     min-height: 60px;
     max-width: 300px;
     min-width: 30px;
     border: 1px solid var(--rich-purple);
-    border-right: none;
+    border-left: none;
     display: flex;
     flex-direction: row;
+    flex-flow: row-reverse;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     background-color: var(--the-white);
 }
 
@@ -21,6 +21,7 @@
     text-align: center;
     margin: 0 5px 0 5px;
     max-width: 80px;
+    cursor: pointer;
 }
 
 .cpPicker {
@@ -34,4 +35,23 @@
     width: 30px;
     height: 30px;
     margin: 5px;
+}
+
+.cpPicker input {
+    width: 100%;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.updateButton {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.updateButton:hover {
+    color: var(--main-color);
 }

@@ -17,7 +17,7 @@ const IndexPage = () => {
       </div>
 
       <div className={styles.nfe}>
-        <div className={styles.nfeChild}>
+        <div className={styles.nfeText}>
           <h2>Not For Everyone</h2>
         </div>
 
