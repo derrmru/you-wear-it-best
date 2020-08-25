@@ -73,6 +73,19 @@ const Header = ({ siteTitle }) => {
             })}
 
             <hr style={{width: "30%", margin: "8vh auto"}} />
+
+            <div className={styles.socialContainer}>
+                <a href="https://www.instagram.com/you.wearitbest/" target="_blank" rel="noreferrer">
+                  <img className={styles.social} src={require("../images/instagram.svg")} alt="instagram icon" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                  <img className={styles.social} src={require("../images/facebook.svg")} alt="facebook icon" />
+                </a>
+                <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer">
+                  <img className={styles.social} src={require("../images/whatsapp.svg")} alt="whatsapp icon" />
+                </a>
+            </div>
+
           </div>
       }
     </header>
