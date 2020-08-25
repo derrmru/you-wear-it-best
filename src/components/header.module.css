@@ -7,7 +7,7 @@
 
 .menuButton {
     font-size: 20px;
-    margin-right: 10px;
+    margin: 0 10px0 10px;
     color: var(--rich-purple);
 }
 

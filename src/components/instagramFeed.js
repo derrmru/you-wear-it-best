@@ -1,5 +1,7 @@
 import React from "react"
 
+import styles from "./instagramFeed.module.css"
+
 let InstagramFeed = (props) => {
     return (
         <div>

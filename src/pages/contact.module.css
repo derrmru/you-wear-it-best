@@ -1,0 +1,96 @@
+/***
+**CONTACT HEADER************************************
+***/
+
+.contactHeader {
+    width: 100%;
+    border: 3px solid var(--rich-purple);
+    border-top: none;
+    padding: 1vh 0 1vh 0;
+    text-align: center;
+}
+
+/***
+**CONTACT OPTIONS************************************
+***/
+
+.contactRow{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contactOption a {
+    text-decoration: none;
+    color: var(--rich-purple);
+}
+
+.contactOption {
+    padding: 30px 0 30px 0;
+    cursor: pointer;
+    min-width: 200px;
+    text-align: center;
+}
+
+.contactOption a:hover {
+    color: var(--main-color);
+}
+
+/***
+**CONTACT FORM************************************
+***/
+
+.formContainer {
+    width: 100%;
+    border: 3px solid var(--rich-purple);
+    padding: 1vh 0 0 0;
+}
+
+form {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+    margin: 0 0 2vh 0;
+    padding: 10px;
+    border: 1px solid var(--rich-purple);
+}
+
+form textarea {
+    width: 100%;
+    margin: 0 0 2vh 0;
+    padding: 10px;
+    border: 1px solid var(--rich-purple);
+    height: 20vh;
+}
+
+form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    background-color: var(--rich-purple);
+    color: var(--the-white);
+    padding: 12px 0 12px 0;
+    border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--main-color);
+}
+
+@media only screen and (max-width: 1025px) {
+    form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        width: 94%;
+    }
+}
