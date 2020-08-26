@@ -39,6 +39,10 @@
 *PROJECTS*********************************
 */
 
+.projectHeader h2 {
+    text-align: center;
+}
+
 .pCardContainer {
     width: 100%;
     border: 3px solid var(--rich-purple);
