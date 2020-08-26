@@ -81,7 +81,7 @@ const Header = ({ siteTitle }) => {
                 <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
                   <img className={styles.social} src={require("../images/facebook.svg")} alt="facebook icon" />
                 </a>
-                <a href="https://www.whatsapp.com" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/31623848591" target="_blank" rel="noreferrer">
                   <img className={styles.social} src={require("../images/whatsapp.svg")} alt="whatsapp icon" />
                 </a>
             </div>

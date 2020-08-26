@@ -17,7 +17,7 @@ const HeaderImage = (props) => {
     query {
       placeholderImage: file(relativePath: { eq: "marek.png" }) {
         childImageSharp {
-          fluid(maxWidth: 2000) {
+          fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -27,7 +27,10 @@ const HeaderImage = (props) => {
 
   return (
     <div className={styles.bannerContainer}>
-      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      <div className={styles.bannerImage}>
+        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+      </div>
+
       <h1 className={styles.bannerText}>
         You.<br />
         Wear It.<br />

@@ -1,19 +1,17 @@
 .projectContainer {
     width: 28%;
-    height: 45vh;
+    height: 360px;
     margin: 2vh 0;
     text-align: center;
     background-color: var(--the-white);
+    position: relative;
 }
 
 .cardImage {
-    height: 35vh;
+    height: 280px;
     width: 90%;
     margin: 2vh auto 2vh auto;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .link {
@@ -31,7 +29,6 @@
 
 @media only screen and (max-width: 1025) {
     .projectContainer {
-        height: 40vh;
         width: 50%;
     }
 }

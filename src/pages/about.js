@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import ProjectCard from "../components/projectCard"
 
 import Layout from "../components/layout"
@@ -15,9 +14,9 @@ const About = () => (
         <h1>My Story</h1>
         <p>Qui commodo sint deserunt do ipsum velit minim id exercitation dolor consequat cillum. Sit ex non nulla sit. Veniam fugiat eiusmod dolor do ipsum consequat occaecat ex et enim id enim dolore. Incididunt adipisicing aute Lorem nulla mollit veniam eu nostrud eiusmod anim exercitation dolore. Consectetur est aliqua duis anim dolor ullamco.</p>
       </div>
-      <div className={styles.bioImage}>
-        <h2>Image Placeholder</h2>
-      </div>
+
+      <div className={styles.bioImage}></div>
+
     </div>
 
     <div className={styles.projectHeader}>

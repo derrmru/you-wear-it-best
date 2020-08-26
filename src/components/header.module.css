@@ -48,4 +48,24 @@
     .menuItem {
         font-size: 25px;
     }
+    .socialContainer{
+        width: 50%;
+    }
+    .social {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .menuItem {
+        font-size: 25px;
+    }
+    .socialContainer{
+        width: 60%;
+    }
+    .social {
+        width: 20px;
+        height: 20px;
+    }    
 }

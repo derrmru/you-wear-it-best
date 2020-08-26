@@ -1,0 +1,12 @@
+.shopLink {
+    text-decoration: none;
+}
+
+.carouselContainer h2 {
+    text-decoration: none;
+    color: var(--the-white);
+}
+
+.carouselContainer h2:hover {
+    color: var(--main-color);
+}

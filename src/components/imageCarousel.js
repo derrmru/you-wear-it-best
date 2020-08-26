@@ -1,25 +1,17 @@
 import React from "react"
-//import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import styles from "./imageCarousel.module.css"
 
-let ImageCarousel = (props) => {
-    /*const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "material.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)*/
-
+const ImageCarousel = () => {
     return (
         <div className={styles.carouselContainer} style={{width: "100%"}}>
-            <h2>Placeholder</h2>
-            {/*<Img fluid={data.placeholderImage.childImageSharp.fluid} />*/}
+            <Link
+              to="/shop"
+              className={styles.shopLink}
+            >
+              <h2>|Shop</h2>
+            </Link>
         </div>
     )
 }

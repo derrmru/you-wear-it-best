@@ -15,7 +15,7 @@ const Contact = () => {
             <SEO title="Get In Touch" />
 
             <div className={styles.contactHeader}>
-                <h2>Contact Header Placeholder</h2>
+                <h2>Contact Me</h2>
             </div>
 
             <div className={styles.contactRow}>

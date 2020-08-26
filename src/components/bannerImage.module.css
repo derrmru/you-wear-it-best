@@ -5,6 +5,10 @@
     box-shadow: inset 0px -5px 15px -12px var(--the-black);
 }
 
+.bannerImage {
+    width: 100%;
+}
+
 .bannerText {
     position: absolute;
     top: 12%;

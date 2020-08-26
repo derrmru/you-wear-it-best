@@ -14,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--the-white);
-    height: 44vh;
+    height: 400px;
     padding-top: 2vh;
 }
 
@@ -25,12 +25,14 @@
 
 .bioImage {
     width: 50%;
-    height: 44vh;
+    height: 400px;
     border: 3px solid var(--rich-purple);
     border-top: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url('../images/marek-profile.webp');
+    background-color: var(--rich-purple);
+    background-position: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /**
@@ -40,12 +42,18 @@
 .pCardContainer {
     width: 100%;
     border: 3px solid var(--rich-purple);
-    height: 60vh;
+    height: 460px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    background-image: url('../images/about-background.webp');
+    background-color: #ffffff2d;
+    background-blend-mode: lighten;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 80%;
 }
 
 /**
@@ -69,7 +77,7 @@
     }
     .bioImage {
         width: 100%;
-        height: auto;
+        height: 55vh;
         border-top: 3px solid var(--rich-purple);
     }
 
