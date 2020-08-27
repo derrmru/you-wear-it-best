@@ -10,6 +10,18 @@ const Contact = () => {
     const [telephone, setTelephone] = useState("");
     const [message, setMessage] = useState("");
 
+    const handleSubmit = (e) => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "contact": "contact", ...this.state})
+          })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+    
+          e.preventDefault();
+    }
+
     return (
         <Layout>
             <SEO title="Get In Touch" />
@@ -47,30 +59,30 @@ const Contact = () => {
                 }}>
                     Get In Touch
                 </h2>
-                <form name="contact" method="post" data-netlify="true" action="/submitted">
+                <form onSubmit={() => handleSubmit} action="/submitted/">
                     <input type="hidden" name="contact" value="contact" />
                     <p>
                     <label>
                         Full Name
-                        <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                        <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
                     </label>
                     </p>
                     <p>
                     <label>
                         Email Address
-                        <input name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </label>
                     </p>
                     <p>
                     <label>
                         Telephone
-                        <input name="telephone" type="text" value={telephone} onChange={(e) => setTelephone(e.target.value)} required />
+                        <input type="text" name="telephone" value={telephone} onChange={(e) => setTelephone(e.target.value)} required />
                     </label>
                     </p>
                     <p>
                     <label>
                         Message
-                        <textarea name="message" type="message" value={message} onChange={(e) => setMessage(e.target.value)} required />
+                        <textarea type="message" name="message" value={message} onChange={(e) => setMessage(e.target.value)} required />
                     </label>
                     </p>
                         <button type="submit">Send</button>
