@@ -10,18 +10,6 @@ const Contact = () => {
     const [telephone, setTelephone] = useState("");
     const [message, setMessage] = useState("");
 
-    const handleSubmit = (e) => {
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "contact": "contact", ...this.state})
-          })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
-    
-          e.preventDefault();
-    }
-
     return (
         <Layout>
             <SEO title="Get In Touch" />
@@ -59,8 +47,8 @@ const Contact = () => {
                 }}>
                     Get In Touch
                 </h2>
-                <form onSubmit={() => handleSubmit} action="/submitted/">
-                    <input type="hidden" name="contact" value="contact" />
+                <form name="contact" method="post" action="/submitted/" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact" />
                     <p>
                     <label>
                         Full Name
