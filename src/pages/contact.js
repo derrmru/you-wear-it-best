@@ -47,7 +47,7 @@ const Contact = () => {
                 }}>
                     Get In Touch
                 </h2>
-                <form name="contact" method="post" data-netlify="true">
+                <form name="contact" method="post" data-netlify="true" action="/submitted">
                     <label>
                         Full Name
                         <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
