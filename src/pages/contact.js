@@ -48,23 +48,32 @@ const Contact = () => {
                     Get In Touch
                 </h2>
                 <form name="contact" method="post" data-netlify="true" action="/submitted">
+                    <input type="hidden" name="contact" value="contact" />
+                    <p>
                     <label>
                         Full Name
                         <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
                     </label>
+                    </p>
+                    <p>
                     <label>
                         Email Address
                         <input name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </label>
+                    </p>
+                    <p>
                     <label>
                         Telephone
                         <input name="telephone" type="text" value={telephone} onChange={(e) => setTelephone(e.target.value)} required />
                     </label>
+                    </p>
+                    <p>
                     <label>
                         Message
                         <textarea name="message" type="message" value={message} onChange={(e) => setMessage(e.target.value)} required />
                     </label>
-                        <input type="submit" value="Send" />
+                    </p>
+                        <button type="submit">Send</button>
                 </form>
             </div>
 

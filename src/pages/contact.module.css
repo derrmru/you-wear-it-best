@@ -84,16 +84,17 @@ form textarea {
     height: 20vh;
 }
 
-form input[type="submit"] {
+form button {
     border: none;
     cursor: pointer;
+    margin: 0 0 2vh 0;
     background-color: var(--rich-purple);
     color: var(--the-white);
     padding: 12px 0 12px 0;
     border-radius: 5px;
 }
 
-form input[type="submit"]:hover {
+form button:hover {
     background-color: var(--main-color);
 }
 
