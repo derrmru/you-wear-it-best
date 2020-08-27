@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import styles from "./projectCard.module.css"
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
     const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "jacket-cutout.webp" }) {
@@ -26,7 +26,7 @@ const ProjectCard = () => {
                     to="/shop"
                     className={styles.link}
                 >
-                    |Product
+                    |{props.title}
                 </Link>
         </div>
     )
