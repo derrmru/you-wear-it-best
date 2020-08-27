@@ -1,10 +1,26 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCard from "../components/projectCard"
 import styles from "./shop.module.css"
 
 const Shop = () => {
+    const data = useStaticQuery(graphql`
+    query shopMD {
+      allMarkdownRemark {
+        nodes {
+          id
+          frontmatter {
+            title
+            price
+          }
+        }
+      }
+    }
+  `)
+  let nodes = data.allMarkdownRemark.nodes;
+
     return (
         <Layout>
             <SEO title="Shop" />
@@ -17,12 +33,17 @@ const Shop = () => {
             </div>
             
             <div className={styles.shopContainer}>
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                
+                {//iterate through projects and post first three here
+                Object.keys(nodes).map((x, i) => {
+                    return <ProjectCard 
+                            key={i} 
+                            title={nodes[i].frontmatter.title}
+                            price={nodes[i].frontmatter.price}
+                            />
+                })
+            }
+
             </div>
 
         </Layout>

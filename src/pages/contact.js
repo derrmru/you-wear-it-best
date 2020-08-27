@@ -47,22 +47,22 @@ const Contact = () => {
                 }}>
                     Get In Touch
                 </h2>
-                <form method="post" action="#">
+                <form name="contact" method="post" data-netlify="true">
                     <label>
                         Full Name
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                        <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
                     </label>
                     <label>
                         Email Address
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                        <input name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </label>
                     <label>
                         Telephone
-                        <input type="text" value={telephone} onChange={(e) => setTelephone(e.target.value)} required />
+                        <input name="telephone" type="text" value={telephone} onChange={(e) => setTelephone(e.target.value)} required />
                     </label>
                     <label>
                         Message
-                        <textarea type="message" value={message} onChange={(e) => setMessage(e.target.value)} required />
+                        <textarea name="message" type="message" value={message} onChange={(e) => setMessage(e.target.value)} required />
                     </label>
                         <input type="submit" value="Send" />
                 </form>

@@ -26,7 +26,7 @@ const ProjectCard = (props) => {
                     to="/shop"
                     className={styles.link}
                 >
-                    |{props.title}
+                    {props.title} | £{props.price}
                 </Link>
         </div>
     )

@@ -14,6 +14,7 @@ const About = () => {
           id
           frontmatter {
             title
+            price
           }
         }
       }
@@ -39,12 +40,15 @@ const About = () => {
         <h2>Recent Projects</h2>
         <div className={styles.pCardContainer}>
 
-          {Object.keys(nodes).map((x, i) => {
-            return <ProjectCard 
-                      key={i} 
-                      title={nodes[x].frontmatter.title}
-                    />
-          })}
+          {//iterate through projects and post first three here
+            Object.keys(nodes).map((x, i) => {
+                return <ProjectCard 
+                          key={i} 
+                          title={nodes[i].frontmatter.title}
+                          price={nodes[i].frontmatter.price}
+                        />
+            })
+          }
 
         </div>
       </div>
