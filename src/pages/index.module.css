@@ -57,6 +57,10 @@ header {
     border: 3px solid var(--rich-purple);
 }
 
+.iFeed h2 {
+    text-align: center;
+}
+
 footer {
     background-color: var(--rich-purple);
     color: var(--the-white);
