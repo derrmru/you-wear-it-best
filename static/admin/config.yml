@@ -11,7 +11,7 @@ collections:
     folder: 'content/products'
     create: true
     slug: 'index'
-    media_folder: ''
+    media_folder: 'content/assets'
     public_folder: ''
     path: '{{title}}/index'
     editor:
@@ -22,5 +22,5 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Price', name: 'price', widget: 'number' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Featured Image', name: 'featuredImage', widget: 'image', media_library: {config: multiple: true} }
+      - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
   
