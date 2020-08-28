@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import PayPal from "../components/PayPal"
@@ -12,14 +12,20 @@ const ProductTemplate = ({ data }) => {
 
     return (
         <Layout>
-            <h1 style={{textAlign: "center", marginTop: "2vh"}}>{frontmatter.title}</h1>
+          <div className={styles.bts}>
+            <Link 
+              to="/shop"
+              >
+                |Back To Shop
+              </Link>
+          </div>
             <div className={styles.itemContainer}>
-                
                 <div className={styles.itemImage}>
                     <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
                 </div>
 
                 <div className={styles.itemDescription}>
+                  <h1 style={{textAlign: "center", marginTop: "2vh"}}>{frontmatter.title}</h1>
                     <hr />
 
                     <div

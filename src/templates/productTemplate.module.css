@@ -1,3 +1,20 @@
+.bts {
+    font-size: 20px;
+    color: var(--the-white);
+    background-color: var(--rich-purple);
+    text-align: center;
+    padding: 20px;
+}
+
+.bts a {
+    text-decoration: none;
+    color: var(--the-white);
+}
+
+.bts a:hover {
+    color: var(--main-color);
+}
+
 .itemContainer {
     width: 100%;
     height: auto;
@@ -22,6 +39,7 @@
     width: 50%;
     border: 3px solid var(--rich-purple);
     border-bottom: none;
+    border-top: none;
     padding: 20px;
     background-image: url('../images/product-background.webp');
     background-color: #fffffff3;
@@ -51,6 +69,7 @@
     .itemDescription {
         width: 90%;
         margin: auto;
+        border-top: 3px solid var(--rich-purple);
     }
 }
 
