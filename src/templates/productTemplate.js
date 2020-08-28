@@ -20,9 +20,14 @@ const ProductTemplate = ({ data }) => {
                 </div>
 
                 <div className={styles.itemDescription}>
+                    <hr />
+
                     <div
                         dangerouslySetInnerHTML={{ __html: html }}
                     />
+
+                    <hr />
+
                     <h3>Price: €{frontmatter.price}</h3>
                     <PayPal 
                         price={frontmatter.price}
