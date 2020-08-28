@@ -11,4 +11,4 @@ Who likes short shorts? We like shorts shorts!
 
 Not just because our brilliant team of technicians have succeeded in creating shorts only 0.5mm in length, but also because these taut shorts remove the necessity for other clothing.
 
-Finally, an item that cannot be reproduced in China for less money. Capitalism has finally been defeated!
+Finally, an item that cannot be reproduced in China for less money. Capitalism has been defeated!
