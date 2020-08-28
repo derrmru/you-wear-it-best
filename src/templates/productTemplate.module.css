@@ -7,6 +7,10 @@
     justify-content: space-evenly;
 }
 
+.itemDescription hr {
+    background-color: var(--rich-purple);
+}
+
 .itemImage {
     width: 50%;
     background-color: var(--the-white);
@@ -19,6 +23,12 @@
     border: 3px solid var(--rich-purple);
     border-bottom: none;
     padding: 20px;
+    background-image: url('../images/product-background.webp');
+    background-color: #fffffff3;
+    background-blend-mode: lighten;
+    background-size: 40%;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .itemDescription h3 {
