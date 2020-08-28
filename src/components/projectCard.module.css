@@ -6,6 +6,12 @@
     background-color: var(--the-white);
     position: relative;
     border: 1px solid var(--rich-purple);
+    transition: 0.5s;
+}
+
+.projectContainer:hover {
+    background-color: #ffffff;
+    border-radius: 5px;
 }
 
 .cardImage {
@@ -18,6 +24,13 @@
     -webkit-box-shadow: inset 0px 0px 10px -5px var(--the-black);
     -moz-box-shadow: inset 0px 0px 10px -5px var(--the-black);
     box-shadow: inset 0px 0px 10px -5px var(--the-black);
+    transition: 0.5s;
+}
+
+.cardImage:hover {
+    -webkit-box-shadow: inset 0px 0px 5px -5px var(--the-black);
+    -moz-box-shadow: inset 0px 0px 5px -5px var(--the-black);
+    box-shadow: inset 0px 0px 5px -5px var(--the-black);
 }
 
 .link {
