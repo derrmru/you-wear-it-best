@@ -22,3 +22,4 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Price', name: 'price', widget: 'number' }
+      - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }

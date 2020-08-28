@@ -5,5 +5,6 @@ description: Hoodie
 price: 2000
 image: './image.webp'
 slug: '/products/hoodie'
+featuredImage: image.webp
 ---
 This is a hoodie and stuff

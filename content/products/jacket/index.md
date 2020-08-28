@@ -5,5 +5,6 @@ description: Jacket
 price: 100
 image: './image.webp'
 slug: '/products/jacket'
+featuredImage: image.webp
 ---
 Test publish

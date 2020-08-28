@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import PayPal from "../components/PayPal"
 
@@ -15,7 +16,7 @@ const ProductTemplate = ({ data }) => {
             <div className={styles.itemContainer}>
                 
                 <div className={styles.itemImage}>
-                    Image
+                    <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} />
                 </div>
 
                 <div className={styles.itemDescription}>
@@ -44,6 +45,13 @@ export const pageQuery = graphql`
         title
         description
         price
+        featuredImage {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+        }
       }
     }
   }

@@ -10,6 +10,7 @@
 .itemImage {
     width: 50%;
     background-color: var(--the-white);
+    padding: 5vw;
 }
 
 .itemDescription {

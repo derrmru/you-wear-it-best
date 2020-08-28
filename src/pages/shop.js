@@ -15,6 +15,13 @@ const Shop = () => {
             title
             price
             slug
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -42,6 +49,7 @@ const Shop = () => {
                             title={nodes[i].frontmatter.title}
                             price={nodes[i].frontmatter.price}
                             slug={nodes[i].frontmatter.slug}
+                            fi={nodes[i].frontmatter.featuredImage}
                             />
                 })
             }

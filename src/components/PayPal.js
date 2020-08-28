@@ -20,7 +20,7 @@ const PayPal = (props) => {
         window.paypal.Buttons({
             style:{
               shape: 'rect',
-              color: 'blue',
+              color: 'white',
               layout: 'vertical',
               label: 'pay',
             },
@@ -38,7 +38,9 @@ const PayPal = (props) => {
             },
             onApprove: async (data, actions) => {
               const order = await actions.order.capture();
-              console.log(order);
+              //console.log(order);
+              setPaidFor(true)
+
             },
             onError: err => {
               setError(err);
@@ -49,7 +51,7 @@ const PayPal = (props) => {
 
     useEffect(() => {
         const script = document.createElement("script");
-        script.src = "https://www.paypal.com/sdk/js?client-id=ARNwFZO38KRqPl2p7j0cukKqALHdgqQtTkXnbeHQ28pktddnhXY0IAY9Fp9EWXt4pKZ_SMDzXcfDmv2g&currency=GBP";
+        script.src = "https://www.paypal.com/sdk/js?client-id=AQ7S1K9k_fTVm-hxtjumIIoZXi3cxwiiEuMbhjj8ls8XmzBbE6KlX6ghFbyKI8QiRXKq1ym46q2xCQNR&currency=EUR";
         script.async = true;
         script.onload = () => renderPP();
         document.body.appendChild(script);
@@ -59,7 +61,11 @@ const PayPal = (props) => {
         <>
             {sdk && 
                 paidFor === false ? <div ref={paypalRef}></div> :
-                    <div>paid for </div>
+                    <div>
+                        <h4>Thank you for buying YWIB!</h4>
+                        <p>An email confirming your order has been sent.</p>
+                        <p>If you have any questions do get in touch!</p>
+                    </div>
             }
         </>
     )

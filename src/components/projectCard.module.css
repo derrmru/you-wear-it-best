@@ -15,9 +15,9 @@
     margin: 2vh auto 2vh auto;
     padding: 12% 0;
     background-color: white;
-    -webkit-box-shadow: inset 0px 0px 20px -13px var(--the-black);
-    -moz-box-shadow: inset 0px 0px 20px -13px var(--the-black);
-    box-shadow: inset 0px 0px 20px -13px var(--the-black);
+    -webkit-box-shadow: inset 0px 0px 10px -5px var(--the-black);
+    -moz-box-shadow: inset 0px 0px 10px -5px var(--the-black);
+    box-shadow: inset 0px 0px 10px -5px var(--the-black);
 }
 
 .link {

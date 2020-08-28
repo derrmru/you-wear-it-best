@@ -16,6 +16,13 @@ const About = () => {
             title
             price
             slug
+            featuredImage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -49,6 +56,7 @@ const About = () => {
                           title={nodes[i].frontmatter.title}
                           price={nodes[i].frontmatter.price}
                           slug={nodes[i].frontmatter.slug}
+                          fi={nodes[i].frontmatter.featuredImage}
                         />
             })
           }
