@@ -8,15 +8,15 @@ const ProjectCard = (props) => {
 
     return (
         <div className={styles.projectContainer}>
+          <Link
+              to={props.slug}
+              className={styles.link}
+              >
             <div className={styles.cardImage}>
                 <Img fluid={props.fi.childImageSharp.fluid} style={{width: "80%", top: "10%", left: "10%"}}/>
             </div>
-                <Link
-                    to={props.slug}
-                    className={styles.link}
-                >
                     {props.title} | €{props.price}
-                </Link>
+          </Link>
         </div>
     )
 }
