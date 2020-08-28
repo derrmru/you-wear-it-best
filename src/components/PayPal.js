@@ -50,11 +50,13 @@ const PayPal = (props) => {
     }
 
     useEffect(() => {
+      if (sdk === false) {
         const script = document.createElement("script");
         script.src = "https://www.paypal.com/sdk/js?client-id=AQ7S1K9k_fTVm-hxtjumIIoZXi3cxwiiEuMbhjj8ls8XmzBbE6KlX6ghFbyKI8QiRXKq1ym46q2xCQNR&currency=EUR";
         script.async = true;
         script.onload = () => renderPP();
         document.body.appendChild(script);
+      }
     })
 
     return (
