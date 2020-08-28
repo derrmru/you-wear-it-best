@@ -9,6 +9,14 @@
     font-size: 20px;
     margin: 0 10px0 10px;
     color: var(--rich-purple);
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.menuButton {
+    outline: none;
+    box-shadow: none;
 }
 
 .menuArea {

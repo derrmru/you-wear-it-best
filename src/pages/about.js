@@ -29,7 +29,6 @@ const About = () => {
     }
   `)
   let nodes = data.allMarkdownRemark.nodes;
-  console.log(nodes)
 
   return (
     <Layout>

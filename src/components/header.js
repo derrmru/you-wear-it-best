@@ -55,9 +55,12 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h1>
 
-        <div className={styles.menuButton} onClick={() => setToggleMenu(!toggleMenu)}>
-            {toggleMenu ? <div>|x|</div> : <div>Menu</div>}
-        </div>
+        <button 
+          className={styles.menuButton}
+          onClick={() => setToggleMenu(!toggleMenu)}
+          >
+            {toggleMenu ? <div>|x|</div> : <div>|Menu</div>}
+        </button>
       </div>
       {
         toggleMenu && <div className={styles.menuArea}>

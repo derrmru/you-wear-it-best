@@ -24,6 +24,13 @@
     cursor: pointer;
 }
 
+.cpBox button {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
 .cpPicker {
     max-width: 200px;
     display: flex;
@@ -35,6 +42,10 @@
     width: 30px;
     height: 30px;
     margin: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
 }
 
 .cpPicker input {

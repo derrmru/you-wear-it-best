@@ -38,16 +38,22 @@ const ColorPicker = () => {
             {
                 expand ? 
                 <>
-                    <p onClick={() => {setExpand(!expand)}}>&#60;</p>
+                    <button aria-label="Expand Color Picker" onClick={() => {setExpand(!expand)}}>&#60;</button>
                         <div className={styles.cpPicker}>
-                            {Colors.map((x) => {
-                                return <div className={styles.colorBox} style={{backgroundColor: x}} onClick={() => {setColor(x)}}></div>
+                            {Colors.map((x, i) => {
+                                return <button 
+                                            aria-label="Select This Color" 
+                                            key={("color" + i)}
+                                            className={styles.colorBox} 
+                                            style={{backgroundColor: x}} 
+                                            onClick={() => {setColor(x)}}
+                                            />
                             })}
                             <input type="text" value={typedColor} onChange={(e) => {setTypedColor(e.target.value)}} />
-                            <div className={styles.updateButton} onClick={() => setColor(typedColor)}>| Set To Typed Color</div>
+                            <button className={styles.updateButton} onClick={() => setColor(typedColor)}>| Set To Typed Color</button>
                         </div>
                 </> :
-                <p onClick={() => {setExpand(!expand)}}>&#62;</p>
+                <button aria-label="Condense Color Picker" onClick={() => {setExpand(!expand)}}>&#62;</button>
             }
         </div>
     )
