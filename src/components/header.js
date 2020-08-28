@@ -61,9 +61,10 @@ const Header = ({ siteTitle }) => {
       </div>
       {
         toggleMenu && <div className={styles.menuArea}>
-            {Object.keys(Pages).map((x) => {//map through Pages object to create menu
+            {Object.keys(Pages).map((x, i) => {//map through Pages object to create menu
               return (
                 <Link
+                  key={('menu' + i)}
                   to={Pages[x].url}
                   className={styles.menuItem}
                 >

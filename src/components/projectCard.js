@@ -23,10 +23,10 @@ const ProjectCard = (props) => {
                 <Img fluid={data.placeholderImage.childImageSharp.fluid} style={{width: "80%", top: "10%", left: "10%"}}/>
             </div>
                 <Link
-                    to="/shop"
+                    to={props.slug}
                     className={styles.link}
                 >
-                    {props.title} | £{props.price}
+                    {props.title} | €{props.price}
                 </Link>
         </div>
     )

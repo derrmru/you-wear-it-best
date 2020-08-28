@@ -1,0 +1,25 @@
+.itemContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.itemImage {
+    width: 50%;
+    background-color: var(--the-white);
+}
+
+.itemDescription {
+    text-align: left;
+    width: 50%;
+    border: 3px solid var(--rich-purple);
+    border-bottom: none;
+    padding: 20px;
+}
+
+.itemDescription h3 {
+    color: var(--rich-purple);
+}

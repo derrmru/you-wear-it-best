@@ -15,12 +15,14 @@ const About = () => {
           frontmatter {
             title
             price
+            slug
           }
         }
       }
     }
   `)
   let nodes = data.allMarkdownRemark.nodes;
+  console.log(nodes)
 
   return (
     <Layout>
@@ -46,6 +48,7 @@ const About = () => {
                           key={i} 
                           title={nodes[i].frontmatter.title}
                           price={nodes[i].frontmatter.price}
+                          slug={nodes[i].frontmatter.slug}
                         />
             })
           }

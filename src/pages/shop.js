@@ -14,6 +14,7 @@ const Shop = () => {
           frontmatter {
             title
             price
+            slug
           }
         }
       }
@@ -40,6 +41,7 @@ const Shop = () => {
                             key={i} 
                             title={nodes[i].frontmatter.title}
                             price={nodes[i].frontmatter.price}
+                            slug={nodes[i].frontmatter.slug}
                             />
                 })
             }
