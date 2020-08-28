@@ -24,3 +24,37 @@
 .itemDescription h3 {
     color: var(--rich-purple);
 }
+
+/**
+*MEDIA QUERIES*********************************
+*/
+
+@media only screen and (max-width: 1025px) {
+    .itemContainer {
+        flex-direction: column;
+    }
+    .itemImage {
+        width: 90%;
+        margin: auto;
+        padding: 15%;
+    }
+    .itemDescription {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .itemContainer {
+        flex-direction: column;
+    }
+    .itemImage {
+        width: 100%;
+        margin: auto;
+    }
+    .itemDescription {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+}
