@@ -1,3 +1,4 @@
 ---
+title: "Shop"
 slug: /shop
 ---
