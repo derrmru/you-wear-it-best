@@ -5,7 +5,7 @@ description: Hoodie
 price: 2000
 image: ./image.webp
 slug: /products/hoodie
-featuredImage: image.webp
+featuredImage: product-background.png
 ---
 This is a hoodie that was lovingly made from reclaimed and recycled llama wool. 
 
