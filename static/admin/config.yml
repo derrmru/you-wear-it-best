@@ -28,8 +28,8 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
   - name: 'menu'
-    label: 'Menu'
-    label_singular: 'Menu'
+    label: 'Menu Items'
+    label_singular: 'Menu Item'
     folder: 'content/menu'
     create: true
     slug: 'index'
@@ -40,4 +40,16 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Position', name: 'position', widget: 'number' }
+  - name: 'blog'
+    label: 'Blog Posts'
+    label_singular: 'Blog Post'
+    folder: 'content/blog'
+    create: true
+    slug: 'blog'
+    path: '{{slug}}/blog'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
   
