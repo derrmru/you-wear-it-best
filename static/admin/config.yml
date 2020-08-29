@@ -27,4 +27,15 @@ collections:
       - { label: 'Price', name: 'price', widget: 'number' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Featured Image', name: 'featuredImage', widget: 'image' }
+  - name: 'menu'
+    label: 'Menu'
+    label_singular: 'Menu'
+    folder: 'content/menu'
+    create: true
+    slug: 'index'
+    path: '{{slug}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Slug', name: 'slug', widget: 'string' }
   

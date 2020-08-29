@@ -1,10 +1,10 @@
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 
 import styles from "./header.module.css"
 
-//Pages Object to map out menu Items -- add new Pages her if you want in the header Menu
+//Pages Object to map out menu Items -- add new Pages here if you want in the navigation Menu
 export const Pages = {
   home: {
     title: "Home",
