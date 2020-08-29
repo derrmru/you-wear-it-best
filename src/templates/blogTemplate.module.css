@@ -1,0 +1,51 @@
+.btb {
+    font-size: 20px;
+    color: var(--the-white);
+    background-color: var(--rich-purple);
+    text-align: center;
+    padding: 20px;
+}
+
+.btb a {
+    text-decoration: none;
+    color: var(--the-white);
+}
+
+.btb a:hover {
+    color: var(--main-color);
+}
+
+.titleContainer {
+    text-align: center;
+    margin: 5vh 0;
+}
+
+.blogContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.blogText {
+    width: 48%;
+    margin: 5vh 0;
+}
+
+.blogImage {
+    width: 48%;
+    border: solid 3px var(--rich-purple);
+}
+
+@media only screen and (max-width: 1025px) {
+    .blogContainer {
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
+    .blogImage {
+        width: 100%;
+    }
+    .blogText {
+        width: 100%;
+    }
+}
