@@ -73,7 +73,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         component: blogTemplate,
         context: {
           // additional data can be passed via context
-          slug: node.frontmatter.slug,
+          slug: node.frontmatter.slug
         },
       })
     })
