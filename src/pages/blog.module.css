@@ -63,3 +63,30 @@
     width: 80%;
     margin: auto;
 }
+
+@media only screen and (max-width: 1025px) {
+    .blogCard {
+        width: 46%;
+    }
+    .blogImageContainer {
+        height: 300px;
+        width: 80%;
+    }
+    .excerpt {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blogCard {
+        width: 90%;
+        flex-direction: row;
+    }
+    .blogImageContainer {
+        height: 260px;
+        width: 90%;
+    }
+    .excerpt {
+        width: 80%;
+    }
+}
