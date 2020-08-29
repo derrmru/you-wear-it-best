@@ -4,6 +4,7 @@ backend:
 
 media_folder: static/img
 public_folder: /img
+logo_url: src/images/logo.png
 
 collections:
   - name: 'products'
