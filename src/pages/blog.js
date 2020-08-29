@@ -32,6 +32,8 @@ const Blog = () => {
         <Layout>
             <h1 className={styles.bTitle}>Blog</h1>
 
+            <hr className={styles.blogHR} />
+
             <div className={styles.theBlogs}>
                 {Object.keys(nodes).map((node, i) => {
                     return <Link
@@ -48,6 +50,7 @@ const Blog = () => {
                                                 />
                                         </div>
                                 </div>
+                                
                                 <p
                                     className={styles.excerpt}
                                     >
