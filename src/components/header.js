@@ -1,31 +1,28 @@
-import { Link, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 
 import styles from "./header.module.css"
 
-//Pages Object to map out menu Items -- add new Pages here if you want in the navigation Menu
-export const Pages = {
-  home: {
-    title: "Home",
-    url: '/'
-  },
-  about: {
-    title: "About",
-    url: '/about'
-  },
-  shop: {
-    title: "Shop",
-    url: '/shop'
-  },
-  contact: {
-    title: "Contact",
-    url: '/contact'
-  }
-}
-
 //Header Component
 const Header = ({ siteTitle }) => {
+
+  //Menu Object to map out menu Items --- allows new menu items from Netlify
+  const menuItems = useStaticQuery(graphql`
+    query menuItems {
+      allMarkdownRemark(sort: {fields: [frontmatter___position], order: ASC}, filter: {frontmatter: {position: {ne: null}}}) {
+        nodes {
+          frontmatter {
+            slug
+            title
+            position
+          }
+        }
+      }
+    }
+  `)
+  const frontmatter = menuItems.allMarkdownRemark.nodes;
+
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
@@ -64,14 +61,14 @@ const Header = ({ siteTitle }) => {
       </div>
       {
         toggleMenu && <div className={styles.menuArea}>
-            {Object.keys(Pages).map((x, i) => {//map through Pages object to create menu
+            {Object.keys(frontmatter).map((x, i) => {//map through frontmatter object to create menu
               return (
                 <Link
                   key={('menu' + i)}
-                  to={Pages[x].url}
+                  to={frontmatter[x].frontmatter.slug}
                   className={styles.menuItem}
                 >
-                  <div className={styles.menuItem}>{Pages[x].title}</div>
+                  <div className={styles.menuItem}>{frontmatter[x].frontmatter.title}</div>
                 </Link>
               )
             })}

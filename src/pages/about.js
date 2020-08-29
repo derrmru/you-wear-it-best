@@ -9,13 +9,12 @@ import SEO from "../components/seo"
 const About = () => {
   const data = useStaticQuery(graphql`
     query findMD {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: {frontmatter: {price: {ne: null}}}) {
         nodes {
-          id
           frontmatter {
+            slug
             title
             price
-            slug
             featuredImage {
               childImageSharp {
                 fluid {

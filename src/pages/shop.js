@@ -8,13 +8,12 @@ import styles from "./shop.module.css"
 const Shop = () => {
     const data = useStaticQuery(graphql`
     query shopMD {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: {frontmatter: {price: {ne: null}}}) {
         nodes {
-          id
           frontmatter {
+            slug
             title
             price
-            slug
             featuredImage {
               childImageSharp {
                 fluid {
