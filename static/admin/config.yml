@@ -39,4 +39,5 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'number' }
   
