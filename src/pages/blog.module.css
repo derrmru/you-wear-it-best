@@ -44,6 +44,7 @@
     flex-direction: column;
     justify-content: center;
     transition: 1s;
+    overflow: hidden;
     -webkit-box-shadow: inset 0px 0px 10px -5px var(--the-black);
     -moz-box-shadow: inset 0px 0px 10px -5px var(--the-black);
     box-shadow: inset 0px 0px 10px -5px var(--the-black);

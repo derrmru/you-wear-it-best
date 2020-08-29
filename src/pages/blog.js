@@ -8,7 +8,7 @@ import styles from "./blog.module.css"
 const Blog = () => {
     const blogs = useStaticQuery(graphql`
         query findBlogs {
-            allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}) {
+            allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}, sort: {order: DESC, fields: frontmatter___date}) {
                 nodes {
                   frontmatter {
                     title
