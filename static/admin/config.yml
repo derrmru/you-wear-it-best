@@ -4,7 +4,9 @@ backend:
 
 media_folder: static/img
 public_folder: /img
-logo_url: src/images/logo.png
+logo_url: https://github.com/derrmru/you-wear-it-best/blob/master/src/images/logo.png?raw=true
+display_url: https://you-wear-it-best.netlify.app
+
 
 collections:
   - name: 'products'
