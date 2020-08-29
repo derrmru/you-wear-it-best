@@ -11,9 +11,9 @@ collections:
     folder: 'content/products'
     create: true
     slug: 'index'
-    media_folder: 'content/assets'
-    public_folder: 'images/uploads'
-    path: '{{title}}/index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{slug}}/index'
     editor:
       preview: false
     fields:
