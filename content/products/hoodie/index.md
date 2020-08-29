@@ -1,4 +1,5 @@
 ---
+type: product
 title: Hoodie
 date: 2020-08-27T12:22:43.109Z
 description: Hoodie
