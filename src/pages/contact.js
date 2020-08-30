@@ -61,9 +61,6 @@ const Contact = () => {
                     fluid={bi.file.childImageSharp.fluid} 
                     Tag="section"
                     className={styles.contactBackground}
-                    style={{
-                        backgroundSize: ''
-                    }}
                     >
 
                 <h2 style={{
