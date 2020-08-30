@@ -9,7 +9,9 @@ import SEO from "../components/seo"
 const About = () => {
   const data = useStaticQuery(graphql`
     query findMD {
-      allMarkdownRemark(filter: {frontmatter: {price: {ne: null}}}) {
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "product"}}}, sort: {order: DESC, 
+        fields: frontmatter___date}, 
+        limit: 3) {
         nodes {
           frontmatter {
             slug
