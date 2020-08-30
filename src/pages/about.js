@@ -51,12 +51,13 @@ const About = () => {
 
           {//iterate through projects and post first three here
             Object.keys(nodes).map((x, i) => {
+              let node = nodes[i].frontmatter;
                 return <ProjectCard 
                           key={i} 
-                          title={nodes[i].frontmatter.title}
-                          price={nodes[i].frontmatter.price}
-                          slug={nodes[i].frontmatter.slug}
-                          fi={nodes[i].frontmatter.featuredImage}
+                          title={node.title}
+                          price={node.price}
+                          slug={node.slug}
+                          fi={node.featuredImage}
                         />
             })
           }
