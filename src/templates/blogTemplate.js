@@ -20,7 +20,9 @@ const BlogTemplate = ({ data }) => {
                 <h2>{frontmatter.date}</h2>
             </div>
 
-            <hr />
+            <hr 
+              className={styles.bhr}
+              />
 
             <div className={styles.blogContainer}>
 
@@ -34,7 +36,9 @@ const BlogTemplate = ({ data }) => {
             
             </div>
 
-            <hr />
+            <hr 
+              className={styles.bhr}
+              />
 
         </Layout>
     )
