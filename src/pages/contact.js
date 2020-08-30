@@ -1,10 +1,25 @@
 import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import styles from "./contact.module.css"
 
 const Contact = () => {
+    const bi = useStaticQuery(graphql`
+        query backgroundQuery {
+            file(relativePath: {eq: "contact-background.webp"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+              }
+            }
+    `)
+    console.log(bi)
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [telephone, setTelephone] = useState("");
@@ -42,6 +57,15 @@ const Contact = () => {
             </div>
 
             <div className={styles.formContainer}>
+                <BackgroundImage 
+                    fluid={bi.file.childImageSharp.fluid} 
+                    Tag="section"
+                    className={styles.contactBackground}
+                    style={{
+                        backgroundSize: ''
+                    }}
+                    >
+
                 <h2 style={{
                     textAlign: 'center'
                 }}>
@@ -75,6 +99,8 @@ const Contact = () => {
                     </p>
                         <button type="submit">Send</button>
                 </form>
+
+                </BackgroundImage>
             </div>
 
         </Layout>

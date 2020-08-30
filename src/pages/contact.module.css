@@ -48,12 +48,17 @@
 .formContainer {
     width: 100%;
     border: 3px solid var(--rich-purple);
-    padding: 1vh 0 0 0;
-    background-image: url(../images/contact-background.webp);
+    padding: 0 0 0 0;
+}
+
+.contactBackground {
+    padding: 1vh 0;
+    width: 100%;
     background-color: #ffffff8f;
     background-blend-mode: lighten;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: repeat;
     background-size: 40%;
 }
 
@@ -102,7 +107,7 @@ form button:hover {
     form {
         width: 80%;
     }
-    .formContainer {
+    .contactBackground {
         background-size: 70%;
     }
 }
@@ -111,7 +116,7 @@ form button:hover {
     form {
         width: 94%;
     }
-    .formContainer {
-        background-size: 100%;
+    .contactBackground {
+        background-size: cover;
     }
 }
