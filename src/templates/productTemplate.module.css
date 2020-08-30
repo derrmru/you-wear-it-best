@@ -31,7 +31,10 @@
 .itemImage {
     width: 50%;
     background-color: var(--the-white);
-    padding: 5vw;
+    padding: 0 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     -webkit-box-shadow: inset 0px 0px 20px -12px var(--the-black);
     -moz-box-shadow: inset 0px 0px 20px -12px var(--the-black);
     box-shadow: inset 0px 0px 20px -12px var(--the-black);
