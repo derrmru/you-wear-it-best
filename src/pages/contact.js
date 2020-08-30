@@ -9,10 +9,10 @@ import styles from "./contact.module.css"
 const Contact = () => {
     const bi = useStaticQuery(graphql`
         query backgroundQuery {
-            file(relativePath: {eq: "contact-background.webp"}) {
+            file(relativePath: {eq: "contact-background.png"}) {
             childImageSharp {
                 fluid {
-                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid
                     }
                 }
               }
