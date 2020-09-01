@@ -25,12 +25,23 @@
 
 @media only screen and (max-width: 660px) {
     .bannerText {
-        font-size: 50px;
+        left: 8%;
+        top: 20%;
+    }
+    .bannerImage {
+        width: 136%;
+        margin-left: -26%;
+        overflow: hidden;
     }
 }
 
 @media only screen and (max-width: 560px) {
     .bannerText {
         font-size: 8vw;
+    }
+    .bannerImage {
+        width: 146%;
+        margin-left: -32%;
+        overflow: hidden;
     }
 }

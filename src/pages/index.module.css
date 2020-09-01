@@ -9,6 +9,7 @@ header {
 .bannerImage {
     margin: 0;
     background-color: var(--the-white);
+    overflow: hidden;
 }
 
 .nfe {
