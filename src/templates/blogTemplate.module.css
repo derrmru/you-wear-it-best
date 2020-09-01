@@ -46,6 +46,45 @@
     justify-content: center;
 }
 
+/**
+*PREVIOUS AND NEXT ARTICLE BUTTONS *******************
+*/
+
+.pvContainer {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pvLinkC {
+    width: 50%;
+    margin: 0 0 5vh 0;
+}
+
+.nextC {
+    text-align: right;
+    text-decoration: none;
+    color: var(--rich-purple);
+    transition: 0.4s;
+}
+
+.nextC:hover {
+    color: var(--main-color);
+}
+
+.previousC {
+    text-align: left;
+    text-decoration: none;
+    color: var(--rich-purple);
+    transition: 0.4s;
+}
+
+.previousC:hover {
+    color: var(--main-color);
+}
+
 @media only screen and (max-width: 1025px) {
     .blogContainer {
         flex-direction: column;

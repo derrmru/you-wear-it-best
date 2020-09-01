@@ -1,13 +1,15 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 
 import styles from "./blogTemplate.module.css"
 
-const BlogTemplate = ({ data }) => {
+const BlogTemplate = ({ data, pageContext }) => {
     const { markdownRemark } = data 
     const { frontmatter, html } = markdownRemark
+    const previous = pageContext.prev;
+    const next = pageContext.next;
 
     return (
         <Layout>
@@ -40,6 +42,32 @@ const BlogTemplate = ({ data }) => {
               className={styles.bhr}
               />
 
+            <div className={styles.pvContainer}>
+              <div className={styles.pvLinkC}>
+                {
+                  previous && <Link 
+                                to={previous.frontmatter.slug}
+                                className={styles.previousC}
+                                >
+                                <div>
+                                  &#60;  Previous
+                                </div>
+                              </Link>
+                }
+              </div>
+              <div className={styles.pvLinkC}>
+                {
+                  next && <Link 
+                            to={next.frontmatter.slug}
+                            className={styles.nextC}
+                            >
+                            <div>
+                              Next  &#62;
+                            </div>
+                          </Link>
+                }
+              </div>
+            </div>
         </Layout>
     )
 }

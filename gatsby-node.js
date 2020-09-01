@@ -49,11 +49,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
     const blog = await graphql(`
       {
-        allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}) {
+        allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}, sort: {fields: frontmatter___date, order: ASC}) {
           edges {
+            next {
+              frontmatter {
+                title
+                slug
+              }
+            }
             node {
               frontmatter {
                 slug
+              }
+            }
+            previous {
+              frontmatter {
+                slug
+                title
               }
             }
           }
@@ -67,13 +79,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return
     }
   
-    blog.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const articles = blog.data.allMarkdownRemark.edges;
+    articles.forEach(({ node }, index) => {
       createPage({
         path: node.frontmatter.slug,
         component: blogTemplate,
         context: {
           // additional data can be passed via context
-          slug: node.frontmatter.slug
+          slug: node.frontmatter.slug,
+          prev: index === 0 ? null : articles[index - 1].node,
+          next: index === articles.length - 1 ? null : articles[index + 1].node
         },
       })
     })
