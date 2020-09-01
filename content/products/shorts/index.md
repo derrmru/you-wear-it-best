@@ -6,7 +6,7 @@ description: Colourful Shorts
 price: 150
 image: ./image.webp
 slug: /products/shorts
-featuredImage: image.webp
+featuredImage: image.png
 ---
 Who likes short shorts? We like shorts shorts!
 

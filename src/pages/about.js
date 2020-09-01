@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 import ProjectCard from "../components/projectCard"
 
 import Layout from "../components/layout"
@@ -20,10 +21,17 @@ const About = () => {
             featuredImage {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
+          }
+        }
+      }
+      file(relativePath: {eq: "about-background.png"}) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -46,23 +54,27 @@ const About = () => {
       </div>
 
       <div className={styles.projectHeader}>
-        <h2>Recent Projects</h2>
-        <div className={styles.pCardContainer}>
+          <h2>Recent Projects</h2>
+          <BackgroundImage
+              fluid={data.file.childImageSharp.fluid}
+              className={styles.aboutBgImage}
+              >
+          <div className={styles.pCardContainer}>
 
-          {//iterate through projects and post first three here
-            Object.keys(nodes).map((x, i) => {
-              let node = nodes[i].frontmatter;
-                return <ProjectCard 
-                          key={i} 
-                          title={node.title}
-                          price={node.price}
-                          slug={node.slug}
-                          fi={node.featuredImage}
-                        />
-            })
-          }
-
-        </div>
+              {//iterate through projects and post first three here
+                Object.keys(nodes).map((x, i) => {
+                  let node = nodes[i].frontmatter;
+                    return <ProjectCard 
+                              key={i} 
+                              title={node.title}
+                              price={node.price}
+                              slug={node.slug}
+                              fi={node.featuredImage}
+                            />
+                })
+              }
+          </div>
+          </BackgroundImage>
       </div>
 
     </Layout>

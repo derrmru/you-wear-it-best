@@ -6,7 +6,7 @@ description: Jacket
 price: 100
 image: ./image.webp
 slug: /products/jacket
-featuredImage: image.webp
+featuredImage: image.png
 ---
 Move over sliced bread - there's a new uh-mazing in town!
 

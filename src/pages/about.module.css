@@ -52,10 +52,16 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url('../images/about-background.webp');
     background-position: center;
     background-attachment: fixed;
     background-size: 80%;
+}
+
+.aboutBgImage {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: repeat;
 }
 
 /**
