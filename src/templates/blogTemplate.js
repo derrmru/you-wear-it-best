@@ -50,7 +50,7 @@ const BlogTemplate = ({ data, pageContext }) => {
                                 className={styles.previousC}
                                 >
                                 <div>
-                                  &#60;  Previous
+                                  &#60;  Previous|
                                 </div>
                               </Link>
                 }
@@ -62,7 +62,7 @@ const BlogTemplate = ({ data, pageContext }) => {
                             className={styles.nextC}
                             >
                             <div>
-                              Next  &#62;
+                              |Next  &#62;
                             </div>
                           </Link>
                 }
@@ -83,7 +83,7 @@ export const blogQuery = graphql`
         image {
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
         }
