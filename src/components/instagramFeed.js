@@ -10,13 +10,14 @@ let InstagramFeed = () => {
     ]
     const [currentImage, setCurrentImage] = useState(iArr[0][0])
     const [currentHash, setCurrentHash] = useState(iArr[0][1])
+    const [x, setX] = useState(0)
 
     useEffect(() => {
-        let x = 0;
         const interval = setInterval(() => {
-            x += 1
-            if (x === iArr.length) {
-                x = 0
+            if ((x + 1) === iArr.length) {
+                setX(0)
+            } else {
+                setX(x + 1)
             }
             console.log(x);
             setCurrentImage(iArr[x][0])
